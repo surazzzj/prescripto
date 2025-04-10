@@ -13,7 +13,7 @@ import Footer from './components/Footer'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify'
-import AdminLogin from '../../admin/src/pages/Login'
+// import AdminLogin from '../../admin/src/pages/Login'
 
 const App = () => {
   return (
@@ -32,7 +32,7 @@ const App = () => {
         <Route path='/my-profile' element={<MyProfile />} />
         <Route path='/verify' element={<Verify />} />
 
-        <Route path="/admin/login" element={<AdminLogin />} />
+        {/* <Route path="/admin/login" element={<AdminLogin />} /> */}
       </Routes>
       <Footer />
     </div>

@@ -37,7 +37,8 @@ const Navbar = () => {
           <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
         </NavLink>
 
-        <a href="http://localhost:5174/admin/login">
+        {/* <a href="http://localhost:5174/admin/login"> */}
+        <a href="https://prescripto-mern.netlify.app">
           <li className='py-1 px-4 border-gray-200 border-2 rounded-full'>Admin Panel</li>
         </a>
       </ul>
