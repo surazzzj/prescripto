@@ -38,7 +38,7 @@ const Navbar = () => {
         </NavLink>
 
         {/* <a href="http://localhost:5174/admin/login"> */}
-        <a href="https://prescripto-mern.netlify.app">
+        <a href="https://adminprescripto.netlify.app/">
           <li className='py-1 px-4 border-gray-200 border-2 rounded-full'>Admin Panel</li>
         </a>
       </ul>
