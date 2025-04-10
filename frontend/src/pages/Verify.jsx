@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 
 const Verify = () => {
 
-    const [searchParams, setSearchParams] = useSearchParams()
+    const [searchParams] = useSearchParams()
 
     const success = searchParams.get("success")
     const appointmentId = searchParams.get("appointmentId")
@@ -31,17 +31,23 @@ const Verify = () => {
             navigate("/my-appointments")
 
         } catch (error) {
-            toast.error(error.message)
+            toast.error('verification failed!')
             console.log(error)
         }
 
     }
 
+    // useEffect(() => {
+    //     if (token, appointmentId, success) {
+    //         verifyStripe()
+    //     }
+    // }, [token])
+
     useEffect(() => {
-        if (token, appointmentId, success) {
-            verifyStripe()
+        if (token && appointmentId && success) {
+          verifyStripe();
         }
-    }, [token])
+      }, [token, appointmentId, success]);
 
     return (
         <div className='min-h-[60vh] flex items-center justify-center'>
