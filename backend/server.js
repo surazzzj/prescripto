@@ -16,7 +16,10 @@ connectCloudinary()
 // middlewares
 app.use(express.json())
 app.use(cors({
-  origin: ['https://final-prescripto.netlify.app', 'https://adminprescripto.netlify.app'],
+  origin: ['https://final-prescripto.netlify.app', 'https://adminprescripto.netlify.app',
+    'http://localhost:5173', // for dev
+    'http://localhost:5174', // for admin dev
+  ],
   credentials: true,
 }))
 
