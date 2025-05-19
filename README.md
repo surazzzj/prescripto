@@ -1,4 +1,4 @@
-Prescripto 
+# Prescripto 
 ______________________________________
 
 A full-stack, modern, and responsive medical appointment booking platform built using the MERN stack, designed to streamline
