@@ -49,6 +49,10 @@ A modern, full-stack medical appointment booking web app built with the **MERN**
 
 ## 🚀 Getting Started
 
+```bash
+git clone https://github.com/surazzzj/prescripto.git
+cd prescripto
+
 ### Prerequisites
 
 - Node.js
