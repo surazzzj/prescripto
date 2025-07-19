@@ -4,25 +4,13 @@ A modern, full-stack medical appointment booking web app built with the **MERN**
 
 🌐 **Live Demo**: [https://final-prescripto.netlify.app](https://final-prescripto.netlify.app)
 
----
-
-## 📸 Screenshots
-
-<!-- Add your screenshots in the `/assets` folder and reference them here -->
-<p align="center">
-  <img src="assets/homepage.png" alt="Homepage" width="80%" />
-  <br/>
-  <img src="assets/booking.png" alt="Booking Page" width="80%" />
-</p>
-
----
-
 ## 🔧 Tech Stack
 
 **Frontend:**
 - React.js
-- Tailwind CSS / CSS Modules (if used)
+- Tailwind CSS 
 - Axios
+- React Toastify
 - React Router DOM
 
 **Backend:**
@@ -65,9 +53,3 @@ cd prescripto
 ├── server/ # Node.js backend
 ├── .env # Environment variables
 ├── README.md
-
-#### Clone the Repository
-
-```bash
-git clone https://github.com/surazzzj/prescripto.git
-cd prescripto
