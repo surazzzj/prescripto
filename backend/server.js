@@ -24,32 +24,17 @@ app.use(express.json())
 // }))
 
 
+import cors from 'cors'
+
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
+    origin: ['https://finalprescripto.netlify.app', 'https://adminprescripto.netlify.app', 'http://localhost:5173', 'http://localhost:5174'],
+    credentials: true,
+    methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+    allowedHeaders: ['Content-Type','Authorization','token']
+}))
 
-    const allowedOrigins = [
-      'https://finalprescripto.netlify.app',
-      'https://adminprescripto.netlify.app',
-      'http://localhost:5173',
-      'http://localhost:5174'
-    ];
+app.options('*', cors())
 
-    const netlifyPreviewRegex = /^https:\/\/.*--finalprescripto\.netlify\.app$/;
-
-    if (allowedOrigins.includes(origin) || netlifyPreviewRegex.test(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('CORS not allowed for origin: ' + origin));
-    }
-  },
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'token'], // <-- add 'token'
-}));
-
-// Handle OPTIONS preflight requests globally
-app.options('*', cors());
 
 
 
