@@ -27,8 +27,8 @@ app.use(express.json())
 app.use(cors({
   origin: true,               // allow all origins dynamically
   credentials: true,          // allow cookies/auth headers
-  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
-  allowedHeaders: ['Content-Type','Authorization','token']
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'token', 'aToken', 'dToken']
 }))
 
 // Handle OPTIONS preflight globally
