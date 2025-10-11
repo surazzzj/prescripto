@@ -23,18 +23,16 @@ app.use(express.json())
 //   credentials: true,
 // }))
 
+
 app.use(cors({
-    origin: ['https://finalprescripto.netlify.app', 'https://adminprescripto.netlify.app', 'http://localhost:5173', 'http://localhost:5174'],
-    credentials: true,
-    methods: ['GET','POST','PUT','DELETE','OPTIONS'],
-    allowedHeaders: ['Content-Type','Authorization','token']
+  origin: true,               // allow all origins dynamically
+  credentials: true,          // allow cookies/auth headers
+  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type','Authorization','token']
 }))
 
+// Handle OPTIONS preflight globally
 app.options('*', cors())
-
-
-
-
 
 // api endpoints
 app.use("/api/user", userRouter)
