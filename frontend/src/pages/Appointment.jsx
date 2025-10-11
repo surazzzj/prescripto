@@ -55,7 +55,7 @@ const Appointment = () => {
 
 
             while (currentDate < endTime) {
-                let formattedTime = currentDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                let formattedTime = currentDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });    // for showing the valid time format
 
                 let day = currentDate.getDate()
                 let month = currentDate.getMonth() + 1
