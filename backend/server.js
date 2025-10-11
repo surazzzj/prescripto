@@ -24,7 +24,6 @@ app.use(express.json())
 // }))
 
 
-// CORS middleware (updated)
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin) return callback(null, true);
@@ -45,12 +44,13 @@ app.use(cors({
     }
   },
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow all methods
-  allowedHeaders: ['Content-Type', 'Authorization'],    // Allow headers
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'token'], // <-- add 'token'
 }));
 
 // Handle OPTIONS preflight requests globally
 app.options('*', cors());
+
 
 
 
