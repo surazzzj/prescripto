@@ -23,9 +23,6 @@ app.use(express.json())
 //   credentials: true,
 // }))
 
-
-import cors from 'cors'
-
 app.use(cors({
     origin: ['https://finalprescripto.netlify.app', 'https://adminprescripto.netlify.app', 'http://localhost:5173', 'http://localhost:5174'],
     credentials: true,
