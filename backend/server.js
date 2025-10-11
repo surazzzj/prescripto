@@ -24,9 +24,10 @@ app.use(express.json())
 // }))
 
 
+// CORS middleware (updated)
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin) return callback(null, true); // allow non-browser requests like Postman
+    if (!origin) return callback(null, true);
 
     const allowedOrigins = [
       'https://finalprescripto.netlify.app',
@@ -35,17 +36,22 @@ app.use(cors({
       'http://localhost:5174'
     ];
 
-    // Allow Netlify preview URLs dynamically
     const netlifyPreviewRegex = /^https:\/\/.*--finalprescripto\.netlify\.app$/;
 
     if (allowedOrigins.includes(origin) || netlifyPreviewRegex.test(origin)) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS: ' + origin));
+      callback(new Error('CORS not allowed for origin: ' + origin));
     }
   },
   credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow all methods
+  allowedHeaders: ['Content-Type', 'Authorization'],    // Allow headers
 }));
+
+// Handle OPTIONS preflight requests globally
+app.options('*', cors());
+
 
 
 // api endpoints
