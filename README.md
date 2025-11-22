@@ -20,15 +20,16 @@ A modern, full-stack medical appointment booking web app built with the **MERN**
 - JWT (Authentication)
 - Bcrypt (Password hashing)
 - Stripe / Razorpay (Payments)
+- Cloudinary / Multer(images)
 
 ---
 
 ## ✅ Features
 
-- 🧑‍⚕️ Doctor and Patient Roles
 - 🔒 Secure JWT Authentication
-- 📅 Real-time Appointment Slot Booking
+- 🧑‍⚕️ Doctor and Patient Roles
 - 💳 Integrated Online Payment Gateway
+- 📅 Real-time Appointment Slot Booking
 - 📋 Appointment Dashboard (User & Doctor Views)
 - 📬 Toast Notifications
 - 🌐 Fully Responsive Design
