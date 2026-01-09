@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-[#ADADAD]'>
       <img onClick={() => navigate('/')} className='w-44 cursor-pointer' src={assets.logo} alt="" />
-      <ul className='md:flex items-start gap-5 font-medium hidden'>
+      <ul className='md:flex items-start justify-between gap-5 font-medium hidden'>
         <NavLink to='/' >
           <li className='py-1'>HOME</li>
           <hr className='border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden' />
@@ -38,7 +38,7 @@ const Navbar = () => {
         </NavLink>
 
         {/* <a href="http://localhost:5174/admin/login"> */}
-        <a href="https://adminprescripto.netlify.app/">
+        <a href="https://adminprescripto.netlify.app">
           <li className='py-1 px-4 border-gray-200 border-2 rounded-full'>Admin Panel</li>
         </a>
       </ul>

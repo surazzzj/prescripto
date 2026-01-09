@@ -8,8 +8,6 @@ import { v2 as cloudinary } from 'cloudinary'
 import stripe from "stripe";
 import razorpay from 'razorpay';
 
-console.log("Stripe key from env:", process.env.STRIPE_SECRET_KEY);
-
 // Gateway Initialize
 const stripeInstance = new stripe(process.env.STRIPE_SECRET_KEY)
 const razorpayInstance = new razorpay({
@@ -132,7 +130,7 @@ const updateProfile = async (req, res) => {
     }
 }
 
-// API to book appointment 
+// // API to book appointment 
 const bookAppointment = async (req, res) => {
 
     try {
