@@ -1,8 +1,8 @@
 # 🩺 Prescripto – Medical Appointment Booking Platform
 
-A modern, full-stack medical appointment booking web app built with the **MERN** stack (MongoDB, Express.js, React.js, Node.js). It allows patients to book appointments with doctors in real-time, view available slots, and make secure online payments.
+A modern, full-stack **medical appointment booking** web app built with the **MERN** stack (MongoDB, Express.js, React.js, Node.js). It allows patients to book appointments with doctors in real-time, view available slots, and make secure online payments.
 
-🌐 **Live Demo**: [https://final-prescripto.netlify.app](https://final-prescripto.netlify.app)
+🌐 **Live Demo**: [https://final-prescripto.netlify.app](https://finalprescripto.netlify.app)
 
 ## 🔧 Tech Stack
 
@@ -20,15 +20,16 @@ A modern, full-stack medical appointment booking web app built with the **MERN**
 - JWT (Authentication)
 - Bcrypt (Password hashing)
 - Stripe / Razorpay (Payments)
+- Cloudinary / Multer(Images)
 
 ---
 
 ## ✅ Features
 
-- 🧑‍⚕️ Doctor and Patient Roles
 - 🔒 Secure JWT Authentication
-- 📅 Real-time Appointment Slot Booking
+- 🧑‍⚕️ Doctor and Patient Roles
 - 💳 Integrated Online Payment Gateway
+- 📅 Real-time Appointment Slot Booking
 - 📋 Appointment Dashboard (User & Doctor Views)
 - 📬 Toast Notifications
 - 🌐 Fully Responsive Design
