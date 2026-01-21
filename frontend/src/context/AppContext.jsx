@@ -1,91 +1,3 @@
-// import { createContext, useEffect, useState } from "react";
-// import { toast } from "react-toastify";
-// import axios from 'axios'
-
-// export const AppContext = createContext()
-
-// const AppContextProvider = (props) => {
-
-//     const currencySymbol = '₹'
-//     const backendUrl = import.meta.env.VITE_BACKEND_URL
-
-//     const [doctors, setDoctors] = useState([])
-//     const [token, setToken] = useState(localStorage.getItem('token') ? localStorage.getItem('token') : '')
-//     const [userData, setUserData] = useState(false)
-
-//     // Getting Doctors using API
-//     const getDoctosData = async () => {
-
-//         try {
-
-//             const { data } = await axios.get(backendUrl + '/api/doctor/list')
-//             if (data.success) {
-//                 setDoctors(data.doctors)
-//             } else {
-//                 toast.error(data.message)
-//             }
-
-//         } catch (error) {
-//             console.log(error)
-//             toast.error(error.message)
-//         }
-
-//     }
-
-//     // Getting User Profile using API
-//     const loadUserProfileData = async () => {
-
-//         try {
-
-//             const { data } = await axios.get(backendUrl + '/api/user/get-profile', { headers: { token } })
-
-//             if (data.success) {
-//                 setUserData(data.userData)
-//             } else {
-//                 toast.error(data.message)
-//             }
-
-//         } catch (error) {
-//             console.log(error)
-//             toast.error(error.message)
-//         }
-
-//     }
-
-//     useEffect(() => {
-//         getDoctosData()
-//     }, [])
-
-//     useEffect(() => {
-//         if (token) {
-//             loadUserProfileData()
-//         }
-//     }, [token])
-
-//     const value = {
-//         doctors, getDoctosData,
-//         currencySymbol,
-//         backendUrl,
-//         token, setToken,
-//         userData, setUserData, loadUserProfileData
-//     }
-
-//     return (
-//         <AppContext.Provider value={value}>
-//             {props.children}
-//         </AppContext.Provider>
-//     )
-
-// }
-
-// export default AppContextProvider
-
-
-
-
-
-
-
 import { createContext, useEffect, useState, useCallback } from "react"
 import { toast } from "react-toastify"
 import axios from 'axios'
@@ -103,7 +15,7 @@ const AppContextProvider = (props) => {
     )
     const [userData, setUserData] = useState(false)
 
-    // ✅ Memoized doctors fetch (non-blocking)
+    // Memoized doctors fetch (non-blocking)
     const getDoctosData = useCallback(async () => {
         if (doctors.length > 0) return
 
@@ -124,7 +36,7 @@ const AppContextProvider = (props) => {
         }
     }, [backendUrl, doctors.length])
 
-    // ✅ Memoized user profile fetch
+    // Memoized user profile fetch
     const loadUserProfileData = useCallback(async () => {
         if (!token) return
 
@@ -146,7 +58,7 @@ const AppContextProvider = (props) => {
         }
     }, [backendUrl, token])
 
-    // ✅ Defer doctors fetch (lets UI render first)
+    // Defer doctors fetch 
     useEffect(() => {
         const timer = setTimeout(() => {
             getDoctosData()
@@ -155,7 +67,7 @@ const AppContextProvider = (props) => {
         return () => clearTimeout(timer)
     }, [getDoctosData])
 
-    // ✅ Load user profile AFTER token is set (non-blocking)
+    // Load user profile after token is set 
     useEffect(() => {
         if (token) {
             setTimeout(() => {
