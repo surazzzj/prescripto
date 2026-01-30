@@ -52,5 +52,6 @@ cd prescripto
 
 ├── client/ # React frontend
 ├── server/ # Node.js backend
+├── admin / # Admin React
 ├── .env # Environment variables
 ├── README.md
