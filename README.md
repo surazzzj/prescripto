@@ -2,7 +2,7 @@
 
 A modern, full-stack **medical appointment booking** web app built with the **MERN** stack (MongoDB, Express.js, React.js, Node.js). It allows patients to book appointments with doctors in real-time, view available slots, and make secure online payments.
 
-🌐 **Live Demo**: [https://final-prescripto.netlify.app](https://finalprescripto.netlify.app)
+🌐 **Live Demo**: [https://finalprescripto.netlify.app](https://finalprescripto.netlify.app)
 
 ## 🔧 Tech Stack
 
