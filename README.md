@@ -28,7 +28,7 @@ A modern, full-stack **medical appointment booking** web app built with the **ME
 
 - 🔒 Secure JWT Authentication
 - 🧑‍⚕️ Doctor and Patient Roles
-- 💳 Integrated Online Payment Gateway
+- 💳 Integrated Online Payment Gateways
 - 📅 Real-time Appointment Slot Booking
 - 📋 Appointment Dashboard (User & Doctor Views)
 - 📬 Toast Notifications
